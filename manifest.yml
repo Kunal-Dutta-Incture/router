@@ -1,0 +1,12 @@
+applications:
+  - name: role-router
+    path: target/router-0.0.1-SNAPSHOT.jar
+    memory: 512M
+    buildpacks:
+      - sap_java_buildpack_jakarta
+    env:
+      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jre.SAPMachineJRE']"
+      JBP_CONFIG_SAP_MACHINE_JRE: "{ version: 17.+ }"
+    stack: cflinuxfs4
+    services:
+      - approuterBasic-xsuaa

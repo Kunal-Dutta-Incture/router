@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${xsuaa.url}
+
+redirect:
+ admin:
+   url: https://incbtpcoe.workzone.cfapps.us10.hana.ondemand.com/site#workzone-home&/home
+ user:
+   url: https://incture-cherrywork-dev-cw-cpwz-dev-com-incture-custompord3a6b0a.cfapps.eu10-004.hana.ondemand.com/
+
+#redirect:
+#  admin:
+#    url: https://www.google.com
+#  user:
+#    url: https://incbtpcoe.workzone.cfapps.us10.hana.ondemand.com/site#workzone-home&/home
+
+
+    #https://incbtpcoe.workzone.cfapps.us10.hana.ondemand.com/site#workzone-home&/home
